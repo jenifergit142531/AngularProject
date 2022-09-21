@@ -6,6 +6,7 @@ import { AddressComponent } from './address/address.component';
 
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { StatusComponent } from './status/status.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -17,8 +18,8 @@ children:[{path:"add",component:AddressComponent},
 ]
 },
 {path:"access",loadChildren:()=>import('./access/access.module').then(opt=>opt.AccessModule)},
-{path:"login",loadComponent:()=>import('./login/login.component').then(opt=>opt.LoginComponent)}
-
+{path:"login",loadComponent:()=>import('./login/login.component').then(opt=>opt.LoginComponent)},
+{path:"**",component:StatusComponent}
   
 ];
 

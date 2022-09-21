@@ -1,2 +1,20 @@
-<h2>Home</h2>
-<p>Choose from a wide range of options in every category exclusively handpicked for you. Avail best offers only on bigbasket.com-India's most trusted online supermarket. Lowest Prices. Contact Less Delivery. Cash on Delivery. Quality You Trust.xz</p>
+<h1 [ngClass]="classname">Welcome to {{headername | lowercase}}</h1>
+
+<h2 *ngIf="minimum>1000" [style.color]="colorname" [style.font-size]="font">Buy above {{minimum | currency:'INR'}} and get discount of upto {{discount | percent}} </h2>
+
+<h3 [ngStyle]="stylevalue ">Purchase Today!!!!</h3>
+<br>
+
+
+
+<button (click)="order(101,'box',100)">Order Now</button>
+<br>
+<input [value]="isdisabled" [disabled]="isdisabled" #txt (change)="address(txt.value)">
+<br>
+<input [(ngModel)]="headername">
+<br>
+<br>
+<label>Your items on this order {{orderno}}</label>
+<ul>
+    <li *ngFor="let item of orders">{{item}}</li>
+</ul>

@@ -10,8 +10,11 @@ import { StatusComponent } from './status/status.component';
 //import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { AddressComponent } from './address/address.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { AccessModule } from './access/access.module';
 //import { AccessRoutingModule } from './access/access-routing.module';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { AddressComponent } from './address/address.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule
     //LoginComponent,
     
   ],
